@@ -1,4 +1,5 @@
 package com.example.imdb.boundary;
+
 /**
  * 
  * @author Binnur Kurt
@@ -74,11 +75,9 @@ public class CriteriaBean {
 
 	@Override
 	public String toString() {
-		return "CriteriaBean [yearRangeSelected=" + yearRangeSelected
-				+ ", fromYear=" + fromYear + ", toYear=" + toYear
-				+ ", genreSelected=" + genreSelected + ", genre=" + genre
-				+ ", directorSelected=" + directorSelected + ", director="
-				+ director + "]";
+		return "CriteriaBean [yearRangeSelected=" + yearRangeSelected + ", fromYear=" + fromYear + ", toYear=" + toYear
+				+ ", genreSelected=" + genreSelected + ", genre=" + genre + ", directorSelected=" + directorSelected
+				+ ", director=" + director + "]";
 	}
 
 }

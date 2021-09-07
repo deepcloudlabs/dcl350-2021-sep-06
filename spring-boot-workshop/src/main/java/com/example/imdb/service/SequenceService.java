@@ -1,7 +1,8 @@
 package com.example.imdb.service;
+
 /**
  * 
- * @author Binnur Kurt
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
  *
  */
 public interface SequenceService {

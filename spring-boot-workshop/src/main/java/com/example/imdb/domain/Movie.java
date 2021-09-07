@@ -1,10 +1,11 @@
 package com.example.imdb.domain;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 
- * @author Binnur Kurt
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
  *
  */
 public class Movie {
@@ -101,9 +102,8 @@ public class Movie {
 
 	@Override
 	public String toString() {
-		return "Movie [id=" + id + ", title=" + title + ", year=" + year
-				+ ", imdb=" + imdb + ", genres=" + genres + ", directors="
-				+ directors + "]";
+		return "Movie [id=" + id + ", title=" + title + ", year=" + year + ", imdb=" + imdb + ", genres=" + genres
+				+ ", directors=" + directors + "]";
 	}
 
 }

@@ -1,7 +1,8 @@
 package com.example.imdb.domain;
+
 /**
  * 
- * @author Binnur Kurt
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
  *
  */
 public class Director {

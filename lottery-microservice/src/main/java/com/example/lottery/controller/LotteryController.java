@@ -11,6 +11,11 @@ import org.springframework.web.context.annotation.RequestScope;
 
 import com.example.lottery.service.LotteryService;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 @RestController
 @RequestScope
 @RequestMapping("/numbers")
@@ -24,8 +29,8 @@ public class LotteryController {
 		this.lotteryService = lotteryService;
 	}
 
-	@GetMapping(params= {"column"})
-	public List<List<Integer>> getLotteryNumbers(@RequestParam int column){
+	@GetMapping(params = { "column" })
+	public List<List<Integer>> getLotteryNumbers(@RequestParam int column) {
 		return lotteryService.draw(column);
 	}
 }
