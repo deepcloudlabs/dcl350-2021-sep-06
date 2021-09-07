@@ -22,6 +22,17 @@ public class Employee {
 	private BiometricPhoto photo;
 	private JobStyle jobStyle;
 
+	public Employee(TcKimlikNo identity, FullName fullName, Money salary, Iban iban, List<Department> departments,
+			BiometricPhoto photo, JobStyle jobStyle) {
+		this.identity = identity;
+		this.fullName = fullName;
+		this.salary = salary;
+		this.iban = iban;
+		this.departments = departments;
+		this.photo = photo;
+		this.jobStyle = jobStyle;
+	}
+
 	public Employee(Builder builder) {
 		this.identity = builder.identity;
 		this.fullName = builder.fullName;
