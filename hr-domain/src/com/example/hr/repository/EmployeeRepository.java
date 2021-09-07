@@ -5,6 +5,11 @@ import java.util.Optional;
 import com.example.hr.domain.Employee;
 import com.example.hr.domain.TcKimlikNo;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 @Repository
 public interface EmployeeRepository {
 

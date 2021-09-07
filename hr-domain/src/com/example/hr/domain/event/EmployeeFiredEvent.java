@@ -3,6 +3,11 @@ package com.example.hr.domain.event;
 import com.example.hr.domain.FullName;
 import com.example.hr.domain.TcKimlikNo;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 public class EmployeeFiredEvent extends DomainEvent {
 
 	private final TcKimlikNo identity;

@@ -3,6 +3,11 @@ package com.example.hr.domain;
 import java.util.Base64;
 import java.util.Objects;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 @ValueObject
 public final class BiometricPhoto {
 	private final byte[] values;

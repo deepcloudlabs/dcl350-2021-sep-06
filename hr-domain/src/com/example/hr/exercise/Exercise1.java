@@ -3,6 +3,11 @@ package com.example.hr.exercise;
 import com.example.hr.domain.Department;
 import com.example.hr.domain.Employee;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 @SuppressWarnings("unused")
 public class Exercise1 {
 

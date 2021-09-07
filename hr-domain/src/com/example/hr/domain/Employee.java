@@ -2,6 +2,11 @@ package com.example.hr.domain;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 // Problem Space -> Domain -- divide/conquer? --> Sub-domain / Department/Role
 // Solution Space -> Design
 // DDD:  I) Bounded-Context (Solution space) --> Sub-domain (HR)(Problem Space)

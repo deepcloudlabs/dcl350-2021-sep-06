@@ -4,6 +4,11 @@ import java.time.ZonedDateTime;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 public abstract class DomainEvent {
 	private static AtomicLong sequenceGenerator = new AtomicLong();
 	private final String eventId;
