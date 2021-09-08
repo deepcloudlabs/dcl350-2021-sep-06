@@ -7,6 +7,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.concurrent.TimeUnit;
 
+// Rest over http
+// 1) Http: Request/Response --> Pull
+// 2) Http/2 -> SSE (Server Sent Event) -> Push Notification -> Text (json), cannot stream
 public class StudyBinanceClient {
 	private static final String BINANCE_REST_API = "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT";
 	

@@ -7,6 +7,13 @@ import java.net.http.WebSocket.Listener;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.TimeUnit;
 
+// Event-triggered: Domain/Business Event
+// Asynchronous Programming --> Observer
+// Request/Response, Fire/Forget, Publish/Subscribe -> Pull + Push
+// Text + Binary, Can streaming
+// Domain Event -> Json + [Near] Real-time -> 5G
+// http/3 -> WS
+// IoT, Cloud Edge -> MQTT/WS
 public class StudyBinanceWebSocket {
 	private static final String BINANCE_REST_WS_API = "wss://stream.binance.com:9443/ws/btcusdt@trade";
 
@@ -20,6 +27,7 @@ public class StudyBinanceWebSocket {
 
 }
 
+// Listener/Observer
 class BinanceWebSocketListener implements Listener {
 
 	@Override
