@@ -2,6 +2,10 @@ package com.example.hr.entity;
 
 import java.util.List;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,6 +14,8 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import com.example.hr.domain.Department;
 import com.example.hr.domain.FiatCurrency;
 import com.example.hr.domain.JobStyle;
+import com.example.validation.Iban;
+import com.example.validation.TcKimlikNo;
 
 /**
  * 
@@ -19,17 +25,24 @@ import com.example.hr.domain.JobStyle;
 @Document(collection="employees")
 public class EmployeeDocument {
 	@Id
+	@TcKimlikNo
 	private String identity;
 	@Field("first")
+	@Size(min=2)
 	private String firstName;
 	@Field("last")
 	@Indexed
+	@Size(min=2)
 	private String lastName;
+	@Iban
 	private String iban;
+	@NotNull
 	private FiatCurrency currency;
 	@Field("maas")
+	@Min(3_000)
 	private double salary;
 	private String photo;
+	@NotNull
 	private JobStyle jobStyle;
 	private List<Department> departments;
 
