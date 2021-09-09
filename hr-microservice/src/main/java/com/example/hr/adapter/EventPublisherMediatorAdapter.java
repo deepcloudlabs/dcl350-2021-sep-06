@@ -9,6 +9,7 @@ import com.example.hr.infrastructure.EventPublisher;
 @Service
 @Adapter
 public class EventPublisherMediatorAdapter implements EventPublisher {
+	// ApplicationEventPublisher: event-driven between components
 	private ApplicationEventPublisher appEventPublisher;
 
 	public EventPublisherMediatorAdapter(ApplicationEventPublisher appEventPublisher) {
@@ -17,7 +18,9 @@ public class EventPublisherMediatorAdapter implements EventPublisher {
 
 	@Override
 	public void publish(DomainEvent domainEvent) {
-		appEventPublisher.publishEvent(domainEvent);
+		// 2 components -> 1) Kafka: EventPublisherKafkaService, @EventListener
+		//                 2) WebSocket: EventPublisherWebSocketService , @EventListener
+		appEventPublisher.publishEvent(domainEvent); 
 	}
 
 }

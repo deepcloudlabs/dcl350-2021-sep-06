@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.constraints.Min;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,8 @@ import com.example.lottery.service.LotteryService;
 @Validated
 // Alt + Shift + S ==> Source Code Generation
 public class LotteryController {
+	@Value("${server.port}")
+	private String serverPort;
 
 	private LotteryService lotteryService;
 
@@ -35,6 +38,7 @@ public class LotteryController {
 
 	@GetMapping(params = { "column" })
 	public List<List<Integer>> getLotteryNumbers(@RequestParam @Validated @Min(2) int column) {
+		System.err.println("New request has arrived for service running at port " + serverPort);
 		return lotteryService.draw(column);
 	}
 }

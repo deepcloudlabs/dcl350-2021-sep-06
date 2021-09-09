@@ -3,10 +3,12 @@ package com.example.lottery.service.business;
 import java.security.SecureRandom;
 import java.util.Random;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
+import com.example.lottery.service.QualityLevel;
 import com.example.lottery.service.RandomNumberGenerator;
+import com.example.lottery.service.ServiceQuality;
 
 /**
  * 
@@ -14,8 +16,8 @@ import com.example.lottery.service.RandomNumberGenerator;
  *
  */
 @Service
-//@ServiceQuality(QualityLevel.SECURE)
-@ConditionalOnProperty(name = "serviceQuality", havingValue = "SECURE")
+@ServiceQuality(QualityLevel.SECURE)
+//@ConditionalOnProperty(name = "serviceQuality", havingValue = "SECURE")
 public class SecureRandomNumberGenerator implements RandomNumberGenerator {
 	private Random random = new SecureRandom();
 
